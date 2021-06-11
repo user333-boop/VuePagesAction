@@ -34,8 +34,7 @@ runs:
   steps:
       - name: Build Vue
         run: |
-              npm ci
-              npm run build
+              yarn build
               cd dist
               if [ "none" !=  ${{ inputs.cname }} ]; then echo '${{ inputs.cname }}' > CNAME; fi
               git config --global user.email "${{ inputs.gitemail }}"
